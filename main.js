@@ -27,11 +27,10 @@ function converToRomanNumeral(number) {
     const objArrKey = Object.keys(romanNumerals);
     const goal = number;
 
-
     const objArrValsReversed = objArrVals.slice().reverse()
-
     const closestVal = objArrValsReversed.find(number => number <= goal);
     const closestRomanNumeral = objArrKey[objArrVals.indexOf(closestVal)]
+    
     result += closestRomanNumeral;
     number -= closestVal;
   }
