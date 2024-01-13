@@ -24,12 +24,12 @@ function converToRomanNumeral(number) {
 
   while (number > 0) {
     const objArrVals = Object.values(romanNumerals);
-    const objArrKey = Object.keys(romanNumerals);
+    const objArrKeys = Object.keys(romanNumerals);
     const goal = number;
 
     const objArrValsReversed = objArrVals.slice().reverse()
     const closestVal = objArrValsReversed.find(number => number <= goal);
-    const closestRomanNumeral = objArrKey[objArrVals.indexOf(closestVal)]
+    const closestRomanNumeral = objArrKeys[objArrVals.indexOf(closestVal)]
     
     result += closestRomanNumeral;
     number -= closestVal;
@@ -45,7 +45,7 @@ function convertNumeral() {
 
   if (!typedNumber) {
     resultLm.innerHTML = `<p class="invalid-input">Please enter a valid number</p>`;
-    return
+    return;
 
   } else if (typedNumber < 0) {
     resultLm.innerHTML = `<p class="invalid-input">Please enter a number greater than or equal to 1</p>`;
