@@ -19,7 +19,7 @@ const romanNumerals = {
 };
 
 
-function converToRomanNumeral(number) {
+function convertToRomanNumeral(number) {
   let result = '';
 
   while (number > 0) {
@@ -56,7 +56,7 @@ function convertNumeral() {
     return;
   }
 
-  converToRomanNumeral(typedNumber);
+  convertToRomanNumeral(typedNumber);
 }
 
 
